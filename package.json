@@ -1,0 +1,47 @@
+{
+  "name": "@baihejiangnan/dsh-custom-wallpaper",
+  "description": "Custom wallpaper engine for the dsh web GUI: upload an image (client-side WebP/JPEG compression), frosted-glass blur, pane opacity, and auto font-color linkage.",
+  "version": "0.1.0",
+  "author": "baihejiangnan <baihejiangnan@users.noreply.github.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/baihejiangnan/dsh-custom-wallpaper.git"
+  },
+  "homepage": "https://github.com/baihejiangnan/dsh-custom-wallpaper",
+  "bugs": {
+    "url": "https://github.com/baihejiangnan/dsh-custom-wallpaper/issues"
+  },
+  "keywords": [
+    "deepseek-harness",
+    "dsh-plugin",
+    "wallpaper",
+    "web-ui"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-slots",
+        "@deepseek-ai/dsh-client-ui-settings"
+      ],
+      "platform": "web"
+    }
+  },
+  "license": "BSD-3-Clause"
+}

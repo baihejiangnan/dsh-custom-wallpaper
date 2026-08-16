@@ -1,0 +1,7 @@
+node_modules/
+.npm-cache/
+.playwright-cli/
+*.tgz
+.DS_Store
+*.log
+HANDOVER.md

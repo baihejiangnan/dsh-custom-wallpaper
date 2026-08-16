@@ -1,0 +1,4 @@
+# custom-wallpaper bundle patch: inserts its plugin row into the web plugin roster.
+- insert:
+    - id: ui-custom-wallpaper
+      name: '@baihejiangnan/dsh-custom-wallpaper'
